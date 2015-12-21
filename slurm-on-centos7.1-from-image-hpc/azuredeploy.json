@@ -11,7 +11,7 @@
     },
     "existingStorageAccountName": {
       "type": "string",
-      "defaultValue": "",
+      "defaultValue": "cfdgroup2199",
       "metadata": {
         "description": "Existing storage account name where OS image resides"
       }
@@ -170,7 +170,7 @@
     },
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('networkSettings').virtualNetworkName)]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('networkSettings').subnet.dse.name)]",
-    "templateBaseUrl": "https://raw.githubusercontent.com/smith1511/hpc/master/slurm-on-centos7.1-from-image-hpc/",
+    "templateBaseUrl": "https://raw.githubusercontent.com/kddean21/hpc/master/slurm-on-centos7.1-from-image-hpc/",
     "installationCLI": "[concat('bash azuredeploy.sh ', variables('masterVMName'), ' ', variables('workerVMName'), ' ', parameters('workerNodeCount'), ' ', parameters('hpcUserName'), ' ', variables('templateBaseUrl'))]",
     "storageAccountType": "Standard_LRS"
   },
