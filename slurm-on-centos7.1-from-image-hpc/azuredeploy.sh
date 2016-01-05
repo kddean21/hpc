@@ -292,7 +292,7 @@ setup_env()
     echo "export I_MPI_DYNAMIC_CONNECTION=0" >> /etc/profile.d/hpc.sh
 }
 
-install_pkgs
+# install_pkgs
 setup_shares
 setup_hpc_user
 # install_munge
