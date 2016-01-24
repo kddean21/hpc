@@ -248,6 +248,8 @@ setup_hpc_user()
     if is_master; then
     
         useradd -c "HPC User" -g $HPC_GROUP -m -d $SHARE_HOME/$HPC_USER -s /bin/bash -u $HPC_UID $HPC_USER
+        
+        chmod -R a+rw /mnt/
 
         mkdir -p $SHARE_HOME/$HPC_USER/.ssh
         
